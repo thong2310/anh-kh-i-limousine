@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anh Khôi Limousine - Đặt vé xe online</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>🚍 Anh Khôi Limousine</h1>
+    <div id="authArea"></div>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Tìm chuyến xe</h2>
+      <div class="grid">
+        <input id="from" placeholder="Điểm đi (VD: TP.HCM)" />
+        <input id="to" placeholder="Điểm đến (VD: Đà Lạt)" />
+        <input id="date" type="date" />
+        <select id="sort">
+          <option value="price_asc">Giá tăng dần</option>
+          <option value="price_desc">Giá giảm dần</option>
+          <option value="rating_desc">Đánh giá cao</option>
+          <option value="depart_asc">Giờ đi sớm</option>
+        </select>
+        <button onclick="searchTrips()">Tìm vé</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Danh sách chuyến</h2>
+      <div id="tripList"></div>
+    </section>
+
+    <section class="card" id="myBookingsSection" style="display:none;">
+      <h2>Vé của tôi</h2>
+      <div id="myBookings"></div>
+    </section>
+  </main>
+
+  <script src="/script.js"></script>
+</body>
+</html>
